@@ -1,13 +1,12 @@
 package exercises.ex2arrays;
 
-import com.sun.jdi.IntegerValue;
 
 import java.util.Scanner;
 
 public class Arrays {
 
     static int[] arr = new int[5];
-    static String int_str = new String();
+    static String int_str;
     static String[] int_arr = new String[5];
     static Scanner sc = new Scanner(System.in);
 
@@ -19,31 +18,24 @@ public class Arrays {
         int_arr = int_str.split(" ");
 
         for (int i = 0; i < int_arr.length; i++) {
-            arr[i] = Integer.valueOf(int_arr[i]);
+            arr[i] = Integer.parseInt(int_arr[i]);
         }
         return arr;
     }
 
     public static int getValueFromUser() {
         System.out.println("Write a value to find: ");
-        int value = sc.nextInt();
 
-        return value;
+        return sc.nextInt();
     }
 
     /* The output functions */
-    public static void printIndexToUser(int the_index, int the_value) {
-        System.out.println("The " + the_value + " found at index " + the_index);
-    }
-
     public static void printNotFoundToUser(int the_value) {
-        System.out.println("Value not found in the so no index found.");
+        System.out.println(the_value + " not found in the array so no index found.");
     }
 
     public static void printResultToUser(int the_index, int the_value) {
-
-
-
+        System.out.println("The value " + the_value + " found at index " + the_index);
     }
 
 
@@ -55,7 +47,7 @@ public class Arrays {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
     /* The top-level behavior */
