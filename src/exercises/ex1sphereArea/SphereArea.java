@@ -9,6 +9,9 @@ import static java.lang.System.out;
 
 public class SphereArea {
     // TODO Fix the implementation by inserting the correct types!
+    public static float theRadius;
+    public static float theArea;
+
     // Hint: IntelliJ can help you out.
     public static final Scanner input = new Scanner(in);
 
@@ -18,7 +21,7 @@ public class SphereArea {
         return theRadius;
     }
 
-    public static void printAreaResult(theArea) {
+    public static void printAreaResult(float theArea) {
         out.println("This is the area: " + theArea);
     }
 
